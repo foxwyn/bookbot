@@ -19,3 +19,20 @@ def count_chars(text):
     i += 1
 
   return ct
+
+
+def sort_on(dict):
+  return dict["num"]
+
+
+def char_report(char_ct):
+  sorted_chars = []
+
+  for char in char_ct:
+    dict_entry = {"char": char, "num": char_ct[char]}
+    sorted_chars.append(dict_entry)
+
+  sorted_chars.sort(reverse=True, key=sort_on)
+  
+  return sorted_chars
+
